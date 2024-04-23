@@ -1,0 +1,177 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "AppController_getHello",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "x-operation-name": "getHello"
+      }
+    },
+    "/oauth2/passport": {
+      "get": {
+        "operationId": "AuthController_loginFromPassport",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "OAuth2"
+        ],
+        "x-operation-name": "loginFromPassport"
+      }
+    },
+    "/oauth2/api": {
+      "get": {
+        "operationId": "AuthController_loginFromApi",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "OAuth2"
+        ],
+        "x-operation-name": "loginFromApi"
+      }
+    },
+    "/oauth2/callback/passport": {
+      "get": {
+        "operationId": "AuthController_callbackPassport",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Callback"
+        ],
+        "x-operation-name": "callbackPassport"
+      }
+    },
+    "/oauth2/callback/api": {
+      "get": {
+        "operationId": "AuthController_callbackApi",
+        "parameters": [
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Callback"
+        ],
+        "x-operation-name": "callbackApi"
+      }
+    },
+    "/oauth2/user/info": {
+      "get": {
+        "operationId": "AuthController_userInfo",
+        "parameters": [
+          {
+            "name": "access_token",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "User"
+        ],
+        "x-operation-name": "userInfo"
+      }
+    }
+  },
+  "info": {
+    "title": "Test Google OAuth API",
+    "description": "Documentation for Google OAuth API",
+    "version": "0.0.1",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local development server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {}
+  }
+}
