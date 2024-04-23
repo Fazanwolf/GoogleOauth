@@ -2,6 +2,8 @@
 
 Google offre une API robuste qui permet d'accéder à divers services et fonctionnalités, tels que Google Drive, Gmail, Google Calendar, etc., en utilisant l'authentification OAuth 2.0.
 
+Si vous avez des questions ou des problèmes, la [documentation de Google](https://developers.google.com/identity/protocols/oauth2) est bien documenté.
+
 ## Configuration
 
 ### Pré-requis
@@ -46,8 +48,8 @@ Pour obtenir un ID client OAuth 2.0, suivez ces étapes:
 Votre application nécessite le "Client ID" et "Client Secret" afin de manipuler avec les services de Google.
 
 L'implémentation de l'OAuth 2.0 de Google est séparé en deux étapes distinctes:
-1. Le consentemment de l'utilisateur (authorization)
-2. La confirmation du consentemment
+1. Le consentement de l'utilisateur (authorization)
+2. La confirmation du consentement
 
 ### Pré-requis
 
@@ -102,42 +104,3 @@ GET /userinfo/v2/me
 Host: www.googleapis.com
 Authorization: Bearer ACCESS_TOKEN
 ```
-
-
-### Exemple
-
-Ce dépot contient un pseudo-backend en Nestjs qui implémente l'OAuth de Google en utilisant Passport ou encore la librairie "googleapis".
-
-#### Installation
-
-Clonez et installez les dépendances du projet.
-
-```bash
-git clone git@github.com:Fazanwolf/GoogleOauth
-cd GoogleOauth
-npm install
-```
-
-#### Environnement
-
-Copier l'environnement d'exemple et remplir les valeurs.
-
-```bash
-cp .env.example .env
-```
-
-#### Usage
-
-Pour démarrer le serveur, exécutez:
-
-```bash
-npm run start:dev
-```
-
-#### Documentation
-
-Pour accéder aux différentes routes disponibles de l'api, allez sur `http://localhost:3000/api-docs`
-
-Pour tester, copiez et collez les routes sous le tag OAuth2 dans votre navigateur.
-
-![OAuth Example Route](./images/example_oauth_route.png)

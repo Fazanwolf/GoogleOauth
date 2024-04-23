@@ -4,7 +4,7 @@ Ce dépot contient un pseudo-backend en Nestjs qui implémente l'OAuth de Google
 
 ## Pré-requis
 
-Suivre les instructions de [OAuth.md](./resources/OAuth2.md)
+Suivre les instructions de [OAuth.md](./resources/OAuth2.md).
 
 ## Installation
 
